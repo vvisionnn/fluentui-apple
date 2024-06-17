@@ -7,7 +7,7 @@ let package = Package(
     defaultLocalization: "en",
     platforms: [
         .iOS(.v16),
-        .macOS(.v12),
+        // .macOS(.v12),
         .visionOS(.v1),
     ],
     products: [
@@ -24,7 +24,7 @@ let package = Package(
             name: "FluentUI",
             dependencies: [
                 .target(name: "FluentUI_ios", condition: .when(platforms: [.iOS, .visionOS, .macCatalyst])),
-                .target(name: "FluentUI_macos", condition: .when(platforms: [.macOS]))
+                // .target(name: "FluentUI_macos", condition: .when(platforms: [.macOS]))
             ],
             path: "public"
         ),
